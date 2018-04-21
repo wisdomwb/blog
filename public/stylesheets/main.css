@@ -1,10 +1,50 @@
 body {
-    padding: 50px;
+    margin: 0;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    line-height: 2;
 }
 
 a {
-    color: #00B7FF;
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px solid #999;
+    word-wrap: break-word;
+}
+
+.header {
+    background: #f5f5f5;
+}
+
+.header-inner::after {
+    clear: both;
+}
+
+.header-inner::before,
+.header-inner::after {
+    content: " ";
+    display: table;
+}
+
+.header-inner {
+    padding: 25px 0 20px;
+    margin: 0 auto;
+    width: 700px;
+}
+
+.header-inner {
+    position: relative;
+}
+
+.site-meta {
+    float: left;
+    margin-left: -20px;
+    line-height: normal;
+}
+
+.site-meta {
+    margin: 0;
+    margin-left: 0px;
+    text-align: left;
 }
 
 .menu {
@@ -21,11 +61,17 @@ ul {
 }
 
 .main-inner {
-    margin-top: 80px;
+    margin: 80px auto 0;
+    width: 700px;
 }
 
-.main-inner {
-    margin: 0 auto;
-    margin-top: 0px;
-    width: 700px;
+/* /tags */
+
+.tag-cloud {
+    text-align: center;
+}
+
+.tag-cloud a {
+    display: inline-block;
+    margin: 10px;
 }

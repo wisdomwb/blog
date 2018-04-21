@@ -21,32 +21,27 @@
           <ul id="menu" class="menu">
             <li class="menu-item menu-item-home" style="opacity: 1; transform: translateY(0px);">
               <a href="/" rel="section">
-                <i class="menu-item-icon fa fa-fw fa-home"></i>
-                <br> 首页
+                首页
               </a>
             </li>
             <li class="menu-item menu-item-categories" style="opacity: 1; transform: translateY(0px);">
               <a href="/categories" rel="section">
-                <i class="menu-item-icon fa fa-fw fa-th"></i>
-                <br> 分类
+                分类
               </a>
             </li>
             <li class="menu-item menu-item-archives" style="opacity: 1; transform: translateY(0px);">
               <a href="/archives" rel="section">
-                <i class="menu-item-icon fa fa-fw fa-archive"></i>
-                <br> 归档
+                归档
               </a>
             </li>
             <li class="menu-item menu-item-tags menu-item-active" style="opacity: 1; transform: translateY(0px);">
               <a href="/tags" rel="section">
-                <i class="menu-item-icon fa fa-fw fa-tags"></i>
-                <br> 标签
+                标签
               </a>
             </li>
             <li class="menu-item menu-item-search" style="opacity: 1; transform: translateY(0px);">
               <a href="javascript:;" class="st-search-show-outputs">
-                <i class="menu-item-icon fa fa-search fa-fw"></i>
-                <br> 搜索
+                搜索
               </a>
             </li>
           </ul>
@@ -55,43 +50,35 @@
     </header>
     <main>
       <div class="main-inner">
-        <div id="posts-list">
-          <article class="post post-type-normal">
-            <div class="post-header">
-              <h1 class="post-title" itemprop="name headline">
-                <a class="post-title-link" href="/2017/08/04/what-happen-when-click/" itemprop="url">
-                  点击一个Input事件后，发生了什么
-                </a>
-              </h1>
-              <div class="post-meta">
-                <span class="post-time">
-                  <span class="post-meta-item-icon">
-                    <i class="fa fa-calendar-o"></i>
-                  </span>
-                  <span class="post-meta-item-text">发表于</span>
-                  <time itemprop="dateCreated" datetime="2017-08-04T10:13:49+08:00" content="2017-08-04">
-                    2017-08-04
-                  </time>
-                </span>
-                <span class="post-category">
-                  &nbsp; | &nbsp;
-                  <span class="post-meta-item-icon">
-                    <i class="fa fa-folder-o"></i>
-                  </span>
-                  <span class="post-meta-item-text">分类于</span>
-                  <span itemprop="about" itemscope="" itemtype="https://schema.org/Thing">
-                    <a href="/categories/Frontend/" itemprop="url" rel="index">
-                      <span itemprop="name">Frontend</span>
-                    </a>
-                  </span>
-                </span>
-              </div>
-            </div>
-            <div class="post-body">
-              <p>之前在使用draft.js作为富文本编辑处理的时候,想要自己手动触发draft.js的focus.在click和mousedown事件中手动触发都会出线光标移动的情况。后面看了源码，才知道内部是监听了mouseup的事件手动触发focus的。瞬间就去了解点击一个input的背后，事件触发的顺序。</p>
-              <div class="post-more-link text-center"></div>
-            </div>
-          </article>
+        <div class="tag-cloud">
+          <div class="tag-cloud-title">
+            目前共计 23 个标签
+          </div>
+          <div class="tag-cloud-tags">
+            <a href="/tags/HTTP/" style="font-size: 14.25px; color: #b5b5b5">HTTP</a>
+            <a href="/tags/Hadoop/" style="font-size: 25.5px; color: #404040">Hadoop</a>
+            <a href="/tags/Hbase/" style="font-size: 12px; color: #ccc">Hbase</a>
+            <a href="/tags/Hive/" style="font-size: 21px; color: #6f6f6f">Hive</a>
+            <a href="/tags/JavaScript/" style="font-size: 16.5px; color: #9d9d9d">JavaScript</a>
+            <a href="/tags/Kafka/" style="font-size: 12px; color: #ccc">Kafka</a>
+            <a href="/tags/Koa2/" style="font-size: 21px; color: #6f6f6f">Koa2</a>
+            <a href="/tags/LaTex/" style="font-size: 12px; color: #ccc">LaTex</a>
+            <a href="/tags/Latex/" style="font-size: 12px; color: #ccc">Latex</a>
+            <a href="/tags/Linux/" style="font-size: 27.75px; color: #282828">Linux</a>
+            <a href="/tags/Mac/" style="font-size: 23.25px; color: #575757">Mac</a>
+            <a href="/tags/Mahout/" style="font-size: 14.25px; color: #b5b5b5">Mahout</a>
+            <a href="/tags/MySQL/" style="font-size: 12px; color: #ccc">MySQL</a>
+            <a href="/tags/Nginx/" style="font-size: 12px; color: #ccc">Nginx</a>
+            <a href="/tags/Node-js/" style="font-size: 30px; color: #111">Node.js</a>
+            <a href="/tags/R/" style="font-size: 18.75px; color: #868686">R</a>
+            <a href="/tags/React/" style="font-size: 23.25px; color: #575757">React</a>
+            <a href="/tags/RegExp/" style="font-size: 12px; color: #ccc">RegExp</a>
+            <a href="/tags/Spark/" style="font-size: 23.25px; color: #575757">Spark</a>
+            <a href="/tags/Sqoop/" style="font-size: 14.25px; color: #b5b5b5">Sqoop</a>
+            <a href="/tags/Summary/" style="font-size: 12px; color: #ccc">Summary</a>
+            <a href="/tags/Test/" style="font-size: 12px; color: #ccc">Test</a>
+            <a href="/tags/Vue/" style="font-size: 14.25px; color: #b5b5b5">Vue</a>
+          </div>
         </div>
       </div>
     </main>
