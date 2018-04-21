@@ -18,31 +18,42 @@ exports.start = () => {
     let regex0 = /\/javascripts|\/stylesheets|\/images/
     //获取后缀
     let ext = /(\.[^.]+|)$/.exec(pathname)[0]
+    console.log(ext, 'ext')
     if (ext === '.css' || ext === '.js') {
-      fs.readFile(`.publick/${pathname}`, 'utf-8', (err, data) => {
+      fs.readFile(`public/${pathname}`, 'utf-8', (err, data) => {
         if (err) {
           throw err
         }
         res.statusCode = 200
-        res.setHeader('Content-Type', 'text/html')
-        res.setHeader('Content-Type', 'text/html')
+        if (ext === '.css') {
+          res.setHeader('Content-Type', 'text/css')
+        } else if (ext === '.js') {
+          res.setHeader('Content-Type', 'application/javascript')
+        }
+        res.end(data)
       })
     } else {
-      fs.readFile('./views/home.html', 'utf-8', (err, data) => {
-        if (err) {
-          throw err
-        }
-        res.statusCode = 200
-        res.setHeader('Content-Type', 'text/html')
-        // res.setHeader('Access-Control-Allow-Origin', '*')
-        let post = ''
-        req.on('data', (chunk) => {
-          post += chunk
-        })
-        req.on('end', () => {
+      if (/home|\/$/.test(pathname)) {
+        console.log('输出home')
+        fs.readFile('./views/home.html', 'utf-8', (err, data) => {
+          if (err) {
+            throw err
+          }
+          res.statusCode = 200
+          res.setHeader('Content-Type', 'text/html')
           res.end(data)
         })
-      })
+      } else if (/tags/.test(pathname)) {
+        console.log('输出tags')
+        fs.readFile('./views/tags.html', 'utf-8', (err, data) => {
+          if (err) {
+            throw err
+          }
+          res.statusCode = 200
+          res.setHeader('Content-Type', 'text/html')
+          res.end(data)
+        })
+      }
     }
 
   }).listen(port, hostname, () => {

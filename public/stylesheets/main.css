@@ -1,0 +1,31 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+.menu {
+    text-align: center;
+}
+
+.menu .menu-item {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+.main-inner {
+    margin-top: 80px;
+}
+
+.main-inner {
+    margin: 0 auto;
+    margin-top: 0px;
+    width: 700px;
+}

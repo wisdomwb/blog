@@ -1,15 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/main.css">
 </head>
+
 <body>
-    <button id="home">home</button>
+  <!-- <button id="home">home</button>
     <button id="tags">tags</button>
-    <h3>home</h3>
-    <!-- <script src="tags.js"></script> -->
+    <h3>home</h3> -->
+  <div class="container">
+    <header class="header">
+      <div class="header-inner">
+        <div class="site-meta"></div>
+        <div class="site-nav">
+          <ul id="menu" class="menu">
+            <li class="menu-item menu-item-home" style="opacity: 1; transform: translateY(0px);">
+              <a href="/" rel="section">
+                <i class="menu-item-icon fa fa-fw fa-home"></i>
+                <br> 首页
+              </a>
+            </li>
+            <li class="menu-item menu-item-categories" style="opacity: 1; transform: translateY(0px);">
+              <a href="/categories" rel="section">
+                <i class="menu-item-icon fa fa-fw fa-th"></i>
+                <br> 分类
+              </a>
+            </li>
+            <li class="menu-item menu-item-archives" style="opacity: 1; transform: translateY(0px);">
+              <a href="/archives" rel="section">
+                <i class="menu-item-icon fa fa-fw fa-archive"></i>
+                <br> 归档
+              </a>
+            </li>
+            <li class="menu-item menu-item-tags menu-item-active" style="opacity: 1; transform: translateY(0px);">
+              <a href="/tags" rel="section">
+                <i class="menu-item-icon fa fa-fw fa-tags"></i>
+                <br> 标签
+              </a>
+            </li>
+            <li class="menu-item menu-item-search" style="opacity: 1; transform: translateY(0px);">
+              <a href="javascript:;" class="st-search-show-outputs">
+                <i class="menu-item-icon fa fa-search fa-fw"></i>
+                <br> 搜索
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="main-inner">
+        <div id="posts-list">
+          <article class="post post-type-normal">
+            <div class="post-header">
+              <h1 class="post-title" itemprop="name headline">
+                <a class="post-title-link" href="/2017/08/04/what-happen-when-click/" itemprop="url">
+                  点击一个Input事件后，发生了什么
+                </a>
+              </h1>
+              <div class="post-meta">
+                <span class="post-time">
+                  <span class="post-meta-item-icon">
+                    <i class="fa fa-calendar-o"></i>
+                  </span>
+                  <span class="post-meta-item-text">发表于</span>
+                  <time itemprop="dateCreated" datetime="2017-08-04T10:13:49+08:00" content="2017-08-04">
+                    2017-08-04
+                  </time>
+                </span>
+                <span class="post-category">
+                  &nbsp; | &nbsp;
+                  <span class="post-meta-item-icon">
+                    <i class="fa fa-folder-o"></i>
+                  </span>
+                  <span class="post-meta-item-text">分类于</span>
+                  <span itemprop="about" itemscope="" itemtype="https://schema.org/Thing">
+                    <a href="/categories/Frontend/" itemprop="url" rel="index">
+                      <span itemprop="name">Frontend</span>
+                    </a>
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div class="post-body">
+              <p>之前在使用draft.js作为富文本编辑处理的时候,想要自己手动触发draft.js的focus.在click和mousedown事件中手动触发都会出线光标移动的情况。后面看了源码，才知道内部是监听了mouseup的事件手动触发focus的。瞬间就去了解点击一个input的背后，事件触发的顺序。</p>
+              <div class="post-more-link text-center"></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <!-- <script src="/javascripts/home.js"></script> -->
 </body>
+
 </html>
