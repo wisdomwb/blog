@@ -43,16 +43,6 @@ exports.start = () => {
           res.setHeader('Content-Type', 'text/html')
           res.end(data)
         })
-      } else if (/tags/.test(pathname)) {
-        console.log('输出tags')
-        fs.readFile('./views/tags.html', 'utf-8', (err, data) => {
-          if (err) {
-            throw err
-          }
-          res.statusCode = 200
-          res.setHeader('Content-Type', 'text/html')
-          res.end(data)
-        })
       }
     }
 
