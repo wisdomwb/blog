@@ -7,6 +7,7 @@ const port = 3000
 
 let homeRouter = require('./routes/home')
 let tagsRouter = require('./routes/tags')
+let postRouter = require('./routes/post')
 
 let result = {
   data: [1, 2, 3],
@@ -16,7 +17,6 @@ let result = {
 exports.start = () => {
   http.createServer((req, res) => {
     let pathname = url.parse(req.url).pathname
-    // console.log(pathname, 'pathname')
     //请求public目录
     let regex0 = /\/javascripts|\/stylesheets|\/images/
     //获取后缀
@@ -35,26 +35,14 @@ exports.start = () => {
         }
         res.end(data)
       })
-    } else {
-      if (/home|\/$/.test(pathname)) {
+    } else {//非js、css文件
+      if (/home|^\/$/.test(pathname)) {//首页
         homeRouter(res, pathname)
-        /* fs.readFile('./views/home.html', 'utf-8', (err, data) => {
-          if (err) {
-            throw err
-          }
-          res.statusCode = 200
-          res.setHeader('Content-Type', 'text/html')
-          res.end(data)
-        }) */
-      } else if (/tags/.test(pathname)) {
-        fs.readFile('./views/home.html', 'utf-8', (err, data) => {
-          if (err) {
-            throw err
-          }
-          res.statusCode = 200
-          res.setHeader('Content-Type', 'text/html')
-          res.end(data)
-        })
+      } else if (/tags/.test(pathname)) {//标签
+        tagsRouter(res, pathname)
+      } else if (/post\/\d*/.test(pathname)) {//文章
+        console.log('postRouter')
+        postRouter(res, pathname)
       }
     }
 

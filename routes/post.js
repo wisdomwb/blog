@@ -3,8 +3,9 @@ const url = require('url')
 const fs = require('fs')
 
 let router = (res, pathname) => {
-  if (pathname === '/tags') {//标签
-    fs.readFile('./views/tags.html', 'utf-8', (err, data) => {
+  console.log('post页面')
+  if (pathname.indexOf('post/')>-1) {//标签
+    fs.readFile('./views/post.html', 'utf-8', (err, data) => {
       if (err) {
         throw err
       }
