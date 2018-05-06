@@ -4,7 +4,7 @@ const fs = require('fs')
 
 let router = (res, pathname) => {
   if (pathname === '/tags') {//标签
-    fs.readFile('./views/tags.html', 'utf-8', (err, data) => {
+    fs.readFile('views/tags.html', 'utf-8', (err, data) => {
       if (err) {
         throw err
       }
